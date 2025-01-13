@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordercaches",
+  "info": {
+    "singularName": "ordercach",
+    "pluralName": "ordercaches",
+    "displayName": "ordercach",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "ville": {
+      "type": "string"
+    },
+    "frais_livraison": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "num_order": {
+      "type": "uid"
+    },
+    "typeLivraison": {
+      "type": "string"
+    },
+    "soustotal": {
+      "type": "decimal"
+    },
+    "dataCart": {
+      "type": "json"
+    }
+  }
+}

@@ -519,6 +519,44 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOrdercachOrdercach extends Struct.CollectionTypeSchema {
+  collectionName: 'ordercaches';
+  info: {
+    description: '';
+    displayName: 'ordercach';
+    pluralName: 'ordercaches';
+    singularName: 'ordercach';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dataCart: Schema.Attribute.JSON;
+    email: Schema.Attribute.Email;
+    frais_livraison: Schema.Attribute.Decimal;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ordercach.ordercach'
+    > &
+      Schema.Attribute.Private;
+    num_order: Schema.Attribute.UID;
+    publishedAt: Schema.Attribute.DateTime;
+    soustotal: Schema.Attribute.Decimal;
+    telephone: Schema.Attribute.String;
+    total: Schema.Attribute.Decimal;
+    typeLivraison: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    username: Schema.Attribute.String;
+    ville: Schema.Attribute.String;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -1128,6 +1166,7 @@ declare module '@strapi/strapi' {
       'api::color.color': ApiColorColor;
       'api::image.image': ApiImageImage;
       'api::order.order': ApiOrderOrder;
+      'api::ordercach.ordercach': ApiOrdercachOrdercach;
       'api::product.product': ApiProductProduct;
       'api::size.size': ApiSizeSize;
       'api::subcategory.subcategory': ApiSubcategorySubcategory;
