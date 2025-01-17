@@ -534,18 +534,16 @@ export interface ApiOrdercachOrdercach extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dataCart: Schema.Attribute.JSON;
     email: Schema.Attribute.Email;
-    frais_livraison: Schema.Attribute.Decimal;
+    fraisLivraison: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::ordercach.ordercach'
     > &
       Schema.Attribute.Private;
-    num_order: Schema.Attribute.UID;
     publishedAt: Schema.Attribute.DateTime;
-    soustotal: Schema.Attribute.Decimal;
+    sousTotal: Schema.Attribute.Decimal;
     telephone: Schema.Attribute.String;
     total: Schema.Attribute.Decimal;
     typeLivraison: Schema.Attribute.String;

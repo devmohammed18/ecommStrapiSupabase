@@ -24,23 +24,17 @@
     "ville": {
       "type": "string"
     },
-    "frais_livraison": {
+    "fraisLivraison": {
       "type": "decimal"
     },
     "total": {
       "type": "decimal"
     },
-    "num_order": {
-      "type": "uid"
-    },
     "typeLivraison": {
       "type": "string"
     },
-    "soustotal": {
+    "sousTotal": {
       "type": "decimal"
-    },
-    "dataCart": {
-      "type": "json"
     }
   }
 }
