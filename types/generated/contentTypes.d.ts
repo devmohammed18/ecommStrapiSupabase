@@ -531,9 +531,11 @@ export interface ApiOrdercachOrdercach extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    adress: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    dataCart: Schema.Attribute.JSON;
     email: Schema.Attribute.Email;
     fraisLivraison: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -542,11 +544,13 @@ export interface ApiOrdercachOrdercach extends Struct.CollectionTypeSchema {
       'api::ordercach.ordercach'
     > &
       Schema.Attribute.Private;
+    numberOrder: Schema.Attribute.UID;
     publishedAt: Schema.Attribute.DateTime;
     sousTotal: Schema.Attribute.Decimal;
     telephone: Schema.Attribute.String;
     total: Schema.Attribute.Decimal;
     typeLivraison: Schema.Attribute.String;
+    typePaiement: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
