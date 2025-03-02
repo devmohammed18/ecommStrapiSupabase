@@ -476,6 +476,11 @@ export interface ApiImageImage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     price: Schema.Attribute.Decimal;
     product: Schema.Attribute.Relation<'manyToOne', 'api::product.product'>;
+    promotion_active: Schema.Attribute.Boolean;
+    promotion_end_end: Schema.Attribute.Date;
+    promotion_percentage: Schema.Attribute.Integer;
+    promotion_price: Schema.Attribute.Decimal;
+    promotion_start_date: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
     sizes: Schema.Attribute.Relation<'manyToMany', 'api::size.size'>;
     updatedAt: Schema.Attribute.DateTime;

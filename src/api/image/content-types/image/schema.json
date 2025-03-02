@@ -46,6 +46,21 @@
       "relation": "manyToMany",
       "target": "api::size.size",
       "inversedBy": "images"
+    },
+    "promotion_active": {
+      "type": "boolean"
+    },
+    "promotion_price": {
+      "type": "decimal"
+    },
+    "promotion_percentage": {
+      "type": "integer"
+    },
+    "promotion_start_date": {
+      "type": "date"
+    },
+    "promotion_end_end": {
+      "type": "date"
     }
   }
 }
